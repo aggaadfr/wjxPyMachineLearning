@@ -1,0 +1,15 @@
+# Project exclude paths
+/*/target
+
+.idea
+WJXTest.iml
+/*/*.iml
+/*/*.xhtml
+/*/.DS_Store
+/*/src/.DS_Store
+/*/src/main/.DS_Store
+/*/LICENSE
+.DS_Store
+
+/*/__pycache__
+
