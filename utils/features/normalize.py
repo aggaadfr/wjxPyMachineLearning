@@ -4,7 +4,11 @@ import numpy as np
 
 
 def normalize(features):
-
+    """
+        归一化操作
+    :param features:
+    :return:
+    """
     features_normalized = np.copy(features).astype(float)
 
     # 计算均值

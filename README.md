@@ -13,10 +13,9 @@ python机器学习项目
 ### 引入python依赖
 
 ```
-
 pip install numpy
-
-
+pip install pandas
+pip install matplotlib
 
 ```
 
