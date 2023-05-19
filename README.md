@@ -13,9 +13,17 @@ python机器学习项目
 ### 引入python依赖
 
 ```
+# 数组操作
 pip install numpy
+# 数据分析
 pip install pandas
+# 画图
 pip install matplotlib
+# 3D画图
+pip install plotly
+pip install ipython
+# 机器数据处理
+pip install sklearn
 
 ```
 

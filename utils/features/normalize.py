@@ -6,8 +6,10 @@ import numpy as np
 def normalize(features):
     """
         归一化操作
+        将数据处理以原点为中心对称
+        公式 = (x - 均值) / 标准差
     :param features:
-    :return:
+    :return: (归一化数据，均值，标准差)
     """
     features_normalized = np.copy(features).astype(float)
 

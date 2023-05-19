@@ -5,6 +5,10 @@ import  pandas as pd
 import matplotlib.pyplot as plt
 
 from LinearRegression.linear_regression import LinearRegression
+"""
+    一个特征函数
+"""
+
 
 # 读取数据
 data = pd.read_csv('data/world-happiness-report-2017.csv')
@@ -40,6 +44,9 @@ learning_rate = 0.01
 linea_regression = LinearRegression(x_train, y_train)
 (theta, cost_history) = linea_regression.train(learning_rate, num_iterations)
 
+# print(cost_history[0])
+# print(cost_history[-1])
+
 
 # 显示损失函数
 # plt.plot(range(num_iterations), cost_history)
@@ -50,7 +57,9 @@ linea_regression = LinearRegression(x_train, y_train)
 
 
 predictions_num = 100
+# 随机取数据
 x_predictions = np.linspace(x_train.min(), x_train.max(), predictions_num).reshape(predictions_num, 1)
+# 计算预测回归结果
 y_predictions = linea_regression.predict(x_predictions)
 
 # 显示
@@ -65,8 +74,7 @@ plt.show()
 
 
 
-# print(cost_history[0])
-# print(cost_history[-1])
+
 
 
 

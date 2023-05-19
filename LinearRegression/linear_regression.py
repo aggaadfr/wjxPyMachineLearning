@@ -14,13 +14,13 @@ class LinearRegression:
             数据初始化操作
         :param data: 训练数据集
         :param labels: 训练的结果数据集
-        :param polynomial_degree:
-        :param sinusoid_degree:
+        :param polynomial_degree: 特征复杂度
+        :param sinusoid_degree: 非线性变化
         :param normalize_data:
         :return:
         """
         # 数据预处理
-        (data_processed, features_mean, features_deviation) = prepare_for_training(data, polynomial_degree=0, sinusoid_degree=0, normalize_data=normalize_data)
+        (data_processed, features_mean, features_deviation) = prepare_for_training(data, polynomial_degree, sinusoid_degree, normalize_data)
 
         self.data = data_processed
         self.labels = labels
@@ -30,6 +30,7 @@ class LinearRegression:
         self.sinusoid_degree = sinusoid_degree
         self.normalize_data = normalize_data
 
+        # 得到行数
         num_features = self.data.shape[1]
         self.theta = np.zeros((num_features, 1))
 
@@ -46,13 +47,13 @@ class LinearRegression:
 
 
     def gradient_descent(self, alpha, num_iterations):
-        cost_history = []
         """
             梯度下降
-        :param alpha:
+        :param alpha: 学习率
         :param num_iterations:
         :return:
         """
+        cost_history = []
         for _ in range(num_iterations):
             self.gradient_step(alpha)
             cost_history.append(self.cost_function(self.data, self.labels))
@@ -62,7 +63,7 @@ class LinearRegression:
     def gradient_step(self, alpha):
         """
             梯度下降参数更新方法，矩阵运算
-        :param alpha:
+        :param alpha: 学习率
         :return:
         """
         num_examples = self.data.shape[0]
@@ -84,7 +85,7 @@ class LinearRegression:
         num_examples = data.shape[0]
         delta = LinearRegression.hypothsis(self.data, self.theta) - labels
         # 损失函数
-        cost = (1/2) * np.dot(delta.T, delta)
+        cost = (1/2) * np.dot(delta.T, delta) / num_examples
         # print(cost.shape)
         return cost[0][0]
 
