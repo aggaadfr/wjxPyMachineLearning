@@ -10,7 +10,7 @@ from LinearRegression.linear_regression import LinearRegression
 
 plotly.offline.init_notebook_mode()
 """
-    多个特征函数
+    多个特征函数的线性回归
 """
 
 

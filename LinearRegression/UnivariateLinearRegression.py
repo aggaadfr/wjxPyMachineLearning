@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 from LinearRegression.linear_regression import LinearRegression
 """
-    一个特征函数
+    一个特征函数的线性回归
 """
 
 

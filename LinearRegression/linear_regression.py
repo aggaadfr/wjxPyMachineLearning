@@ -3,6 +3,7 @@ import numpy as np
 from utils.features import prepare_for_training
 
 # 构建线性回归
+# 使用的是小批量梯度下降
 class LinearRegression:
     """
         1、对数据进行预处理

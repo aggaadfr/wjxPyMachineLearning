@@ -23,7 +23,7 @@ pip install matplotlib
 pip install plotly
 pip install ipython
 # 机器数据处理
-pip install sklearn
+pip install -U scikit-learn
 
 ```
 
